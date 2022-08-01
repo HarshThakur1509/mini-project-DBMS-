@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap');
+
+        :root {
+            --prim: #2b6777;
+            --sec: #ffffff;
+            --main: #52ab98;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        button {
+            border: none;
+            border-radius: 2px;
+            color: white;
+            background-color: #52ab98;
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            color: white;
+        }
+
+        body::before {
+            content: '';
+            /* background: url("https://img.freepik.com/free-vector/neon-game-controllers-joysticks-game-console_32996-1086.jpg?w=2000") no-repeat center center/cover; */
+            background-color: rgb(24, 55, 72);
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: -1;
+        }
+
+        ::-webkit-scrollbar {
+            height: 12px;
+            width: 14px;
+            background: transparent;
+            z-index: 12;
+            overflow: visible;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--prim);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            width: 10px;
+            background-color: white;
+            border-radius: 10px;
+            z-index: 12;
+            border: 4px solid rgba(0, 0, 0, 0);
+            background-clip: padding-box;
+            transition: background-color .32s ease-in-out;
+            margin: 4px;
+            min-height: 32px;
+            min-width: 32px;
+        }
+
+        ::-webkit-scrollbar-corner {
+            background: #202020;
+        }
+
+        ::selection {
+            background: #54a5d4;
+            text-shadow: 1px 1px 2px #000000aa;
+            color: var(--sec);
+        }
+
+        hr {
+            background-color: grey;
+            border: 0px;
+            height: 1px;
+            width: 100%;
+            opacity: 0.5;
+            z-index: 1000;
+        }
+
+        .material-symbols-outlined {
+            color: black;
+        }
+
+        nav {
+            background-color: white;
+            height: 60px;
+
+        }
+
+        .micon {
+            position: relative;
+            left: 43%;
+            top: 0.5rem;
+            cursor: pointer;
+        }
+
+        #ham {
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            color: black;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        #cart {
+            cursor: pointer;
+            color: black;
+            position: absolute;
+            right: 0;
+            top: 1rem;
+        }
+
+
+        #sid {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            transform: translateX(-160%);
+            transition: transform 0.25s ease-in-out;
+            z-index: 10;
+        }
+
+        #sid::before {
+            content: '';
+            background-color: var(--sec);
+            width: 180px;
+            height: 100vh;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 8;
+            opacity: 1;
+
+        }
+
+        aside ul {
+            margin-top: 95px;
+            margin-left: 1rem;
+            display: grid;
+            row-gap: 20px;
+            place-items: center;
+            transition: margin-top 0.5s ease-in-out;
+            z-index: 2;
+        }
+
+        #sid li {
+            list-style: none;
+            cursor: pointer;
+            z-index: 9;
+        }
+
+        #sid a {
+            margin: 0 2rem;
+            position: relative;
+            text-decoration: none;
+            color: black;
+        }
+
+        #sid a::after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .5s ease;
+        }
+
+        #sid a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .scrolling-aside {
+            margin-top: 6rem;
+        }
+
+        section {
+            width: 80%;
+            border: 2px solid white;
+            margin: auto;
+            margin-top: 3rem;
+        }
+
+        .secmid {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* .avail{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid red;
+  width: 60%;
+  margin: auto;
+} */
+        .cart {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart li {
+            background-color: #2b6777;
+            width: 60rem;
+            margin-top: 1rem;
+            display: flex;
+            position: relative;
+        }
+
+
+
+        .cart span {
+            margin-top: 1.5rem;
+            margin-left: 1rem;
+        }
+
+        .cart li span:nth-child(3) {
+            position: absolute;
+            right: 3rem;
+        }
+
+        .cart li button {
+            background: none;
+            position: absolute;
+            bottom: 1rem;
+            left: 16rem;
+            font-size: 1rem;
+        }
+
+        .cart li button:hover {
+            color: red;
+        }
+
+
+        #pur{
+            margin-top: 1rem;
+            width: 10rem;
+            font-size: 1.2rem;
+            height: 2rem;
+            align-self: flex-end;
+            margin-right: 1rem;
+            background-color: #52ab98;
+            border: none;
+            border-radius: 2px;
+            transition: transform 0.3s ease;
+        }
+        #pur:hover{
+            transform: scale(1.1);
+        }
+        #cont{
+            margin-top: 1rem;
+            width: 10rem;
+            font-size: 1rem;
+            height: 2rem;
+            background-color: var(--prim);
+            border: none;
+            border-radius: 2px;
+            transition: transform 0.3s ease
+        }
+        #cont:hover{
+            transform: scale(1.1);
+        }
+        .rec li{
+            margin-top: 1rem;
+            transition: transform 0.3s ease;
+        }
+        .rec li:hover{
+            transform: scale(1.1);
+        }
